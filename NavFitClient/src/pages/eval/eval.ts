@@ -1,3 +1,4 @@
+// https://medium.com/factory-mind/angular-pdf-forms-fa72b15c3fbd
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -106,7 +107,35 @@ export class EvalPage {
   }
 
   // Block 30
-  // dateCounseled
+  dateCounseled = new Date();
+
+  // Block 31
+  counselor: any = {
+    firstname: null,
+    lastname: null,
+    midlleInitial: null
+  }
+
+  // Block 32
+  counselorSignature: any;
+
+  // Block 33-39
+  performanceScore: any = {
+    profKnowledge: null,
+    qualityWork: null,
+    commandEO: null,
+    militaryBearing: null,
+    personalInitiative: null,
+    teamwork: null,
+    leadership: null
+  }
+
+  // Block 40
+  traitAverage: any;
+
+
+
+
 
 
 
