@@ -7,6 +7,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { TabsPage } from '../pages/tabs/tabs';
 import { HomePage } from '../pages/home/home';
+import { RegistrationPage } from '../pages/registration/registration';
 import { AboutPage } from '../pages/about/about';
 import { PersonnelPage } from '../pages/personnel/personnel';
 import { EvalPage } from '../pages/eval/eval';
@@ -18,7 +19,8 @@ import { EvalPage } from '../pages/eval/eval';
     HomePage,
     AboutPage,
     PersonnelPage,
-    EvalPage
+    EvalPage,
+    RegistrationPage
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,8 @@ import { EvalPage } from '../pages/eval/eval';
     HomePage,
     AboutPage,
     PersonnelPage,
-    EvalPage
+    EvalPage,
+    RegistrationPage
   ],
   providers: [
     StatusBar,

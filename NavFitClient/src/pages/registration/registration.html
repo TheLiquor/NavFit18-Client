@@ -1,22 +1,65 @@
+
 <!--
+
   Generated template for the RegistrationPage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
 
+  Ionic pages and navigation.
+
+-->
+
+<ion-header>
   <ion-navbar>
     <ion-title>Registration</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
-  <ion-grid col-lg-6 offset-lg-3 style="padding: 0px;">
+  <form autocomplete="none">
+    <ion-grid col-lg-6 offset-lg-3 style="padding: 0px;">
+      <ion-list>
+        <!-- First Name -->
+        <ion-item>
+          <ion-label showWhen="core">First Name</ion-label>
+          <ion-input name="firstname" autocomplete="none"></ion-input>
+          <ion-icon md-name="person" item-start></ion-icon>
+        </ion-item>
 
-  </ion-grid>
+        <!-- Last Name -->
+        <ion-item>
+          <ion-label showWhen="core">Last Name</ion-label>
+          <ion-input name="lastname" autocomplete="none"></ion-input>
+          <ion-icon item-start></ion-icon>
+        </ion-item>
+
+        <!-- Middle Initial -->
+        <ion-item>
+          <ion-label showWhen="core">Middle Initial</ion-label>
+          <ion-input name="lastname" autocomplete="none"></ion-input>
+          <ion-icon item-start></ion-icon>
+        </ion-item>
+
+        <!-- Last Name -->
+        <ion-item>
+          <ion-label showWhen="core">Last Name</ion-label>
+          <ion-input name="lastname" autocomplete="none"></ion-input>
+          <ion-icon item-start></ion-icon>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Suffix</ion-label>
+          <ion-select>
+            <ion-option value="jr">Jr.</ion-option>
+            <ion-option value="sr">Sr.</ion-option>
+          </ion-select>
+        </ion-item>
+
+
+      </ion-list>
+    </ion-grid>
+  </form>
 </ion-content>
 
 <!--<ion-header>-->

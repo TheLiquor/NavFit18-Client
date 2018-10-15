@@ -5,6 +5,7 @@ import { AboutPage } from '../about/about';
 import { PersonnelPage } from '../personnel/personnel';
 import { EvalPage } from '../eval/eval';
 import { HomePage } from '../home/home';
+import { RegistrationPage } from '../registration/registration';
 /**
  * Generated class for the TabsPage page.
  *
@@ -23,6 +24,7 @@ export class TabsPage {
   tab2Root = PersonnelPage;
   tab3Root = EvalPage;
   tab4Root = AboutPage;
+  tab5Root = RegistrationPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
