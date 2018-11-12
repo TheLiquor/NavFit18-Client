@@ -20,34 +20,35 @@
   <form autocomplete="none">
     <ion-grid col-lg-6 offset-lg-3 style="padding: 0px;">
       <ion-list>
-        <!-- First Name -->
-        <ion-item>
-          <ion-label showWhen="core">First Name</ion-label>
+        <!-- Header -->
+        <ion-list-header class="registration-header">
+        <div>Sailor Information</div>
+        </ion-list-header>
+
+        <ion-item >
+          <ion-label>First Name</ion-label>
           <ion-input name="firstname" autocomplete="none"></ion-input>
-          <ion-icon md-name="person" item-start></ion-icon>
         </ion-item>
 
         <!-- Last Name -->
         <ion-item>
-          <ion-label showWhen="core">Last Name</ion-label>
+          <ion-label>Last Name</ion-label>
           <ion-input name="lastname" autocomplete="none"></ion-input>
-          <ion-icon item-start></ion-icon>
         </ion-item>
 
         <!-- Middle Initial -->
         <ion-item>
-          <ion-label showWhen="core">Middle Initial</ion-label>
+          <ion-label>Middle Initial</ion-label>
           <ion-input name="lastname" autocomplete="none"></ion-input>
-          <ion-icon item-start></ion-icon>
         </ion-item>
 
         <!-- Last Name -->
         <ion-item>
-          <ion-label showWhen="core">Last Name</ion-label>
+          <ion-label>Last Name</ion-label>
           <ion-input name="lastname" autocomplete="none"></ion-input>
-          <ion-icon item-start></ion-icon>
         </ion-item>
 
+        <!-- Suffix -->
         <ion-item>
           <ion-label>Suffix</ion-label>
           <ion-select>
@@ -56,384 +57,59 @@
           </ion-select>
         </ion-item>
 
+        <!-- Date of Birth-->
+        <ion-item>
+          <ion-label>Date of Birth</ion-label>
+          <ion-datetime displayFormat="MM/D/YYYY" pickerFormat="MMM D YYYY"></ion-datetime>
+        </ion-item>
+
+        <!-- Rate -->
+        <ion-item>
+          <ion-label>Rate</ion-label>
+          <ion-input name="rate" ></ion-input>
+        </ion-item>
+
+        <!-- Desig -->
+        <ion-item>
+          <ion-label>Designator</ion-label>
+          <ion-input name="desig" autocomplete="none"></ion-input>
+        </ion-item>
+
+        <!-- SSN -->
+        <ion-item>
+          <ion-label>SSN</ion-label>
+          <ion-input type="password" name="ssn" autocomplete="none"></ion-input>
+        </ion-item>
+
+        <!-- Enlistment Type -->
+        <ion-item>
+          <ion-label>Enlistment Type</ion-label>
+          <ion-select>
+            <ion-option value="active">Active Duty</ion-option>
+            <ion-option value="reserves">Navy Reserve</ion-option>
+            <ion-option value="fts">FTS</ion-option>
+          </ion-select>
+        </ion-item>
+
+        <!-- UIC -->
+        <ion-item>
+          <ion-label>UIC</ion-label>
+          <ion-input name="uic" autocomplete="none"></ion-input>
+        </ion-item>
+
+        <!-- station -->
+        <ion-item>
+          <ion-label>Ship/Station</ion-label>
+          <ion-input name="station" autocomplete="none"></ion-input>
+        </ion-item>
+
+        <!-- Report Date-->
+        <ion-item>
+          <ion-label>Report Date</ion-label>
+          <ion-datetime displayFormat="MM/D/YYYY" pickerFormat="MMM D YYYY"></ion-datetime>
+        </ion-item>
 
       </ion-list>
     </ion-grid>
   </form>
 </ion-content>
-
-<!--<ion-header>-->
-  <!--<ion-navbar color="primary">-->
-    <!--<ion-title>Registration</ion-title>-->
-  <!--</ion-navbar>-->
-<!--</ion-header>-->
-
-<!--<ion-content>-->
-
-<!--<form autocomplete="none">-->
-
-  <!--<button [hidden]="true" type="submit"></button>-->
-  <!--<ion-grid col-lg-6 offset-lg-3 style="padding: 0px;">-->
-    <!--<ion-list>-->
-      <!--<ion-list-header>-->
-        <!--<span item-start showWhen="ios, android">Personal Information</span>-->
-        <!--<div item-start class="section-heading" showWhen="core">Personal Information</div>-->
-      <!--</ion-list-header>-->
-
-
-      <!--&lt;!&ndash;FIRST NAME&ndash;&gt;-->
-      <!--<ion-item class="cws-input" (click)="focusInput('firstname')">-->
-        <!--<ion-label showWhen="core">First Name</ion-label>-->
-        <!--<ion-input placeholder="{{platform.is('core') ? '' : 'First Name'}}" [(ngModel)]="register.firstname"-->
-                   <!--name="firstname" (ionBlur)="validateField('firstname')" autocomplete="none"></ion-input>-->
-        <!--<ion-icon md-name="person" item-start></ion-icon>-->
-      <!--</ion-item>-->
-      <!--<ion-row *ngIf="errorMsg.firstname">-->
-        <!--<ion-col class="input-error">-->
-          <!--<span>{{ errorMsg.firstname}}</span>-->
-        <!--</ion-col>-->
-      <!--</ion-row>-->
-
-      <!--&lt;!&ndash;LAST NAME&ndash;&gt;-->
-      <!--<ion-item class="cws-input"(click)="focusInput('lastname')">-->
-        <!--<ion-label showWhen="core">Last Name</ion-label>-->
-        <!--<ion-input class="registration" placeholder="{{platform.is('core') ? '' : 'Last Name'}}"-->
-                   <!--[(ngModel)]="register.lastname" name="lastname"-->
-                   <!--(ionBlur)="validateField('lastname')" autocomplete="none"></ion-input>-->
-        <!--<ion-icon item-start></ion-icon>-->
-      <!--</ion-item>-->
-
-      <!--<ion-row *ngIf="errorMsg.lastname">-->
-        <!--<ion-col class="input-error">-->
-          <!--<span>{{ errorMsg.lastname}}</span>-->
-        <!--</ion-col>-->
-      <!--</ion-row>-->
-      <!--&lt;!&ndash;<ion-row>&ndash;&gt;-->
-
-      <!--&lt;!&ndash;&lt;!&ndash;FIRST NAME&ndash;&gt;&ndash;&gt;-->
-      <!--&lt;!&ndash;<ion-item col-6>&ndash;&gt;-->
-      <!--&lt;!&ndash;<ion-label showWhen="core">First Name</ion-label>&ndash;&gt;-->
-      <!--&lt;!&ndash;<ion-input placeholder="{{platform.is('core') ? '' : 'First Name'}}" [(ngModel)]="register.firstname"&ndash;&gt;-->
-      <!--&lt;!&ndash;name="firstname" (ionBlur)="validateField('firstname')"></ion-input>&ndash;&gt;-->
-      <!--&lt;!&ndash;<ion-icon md-name="person" item-start></ion-icon>&ndash;&gt;-->
-      <!--&lt;!&ndash;</ion-item>&ndash;&gt;-->
-
-      <!--&lt;!&ndash;&lt;!&ndash;LAST NAME&ndash;&gt;&ndash;&gt;-->
-      <!--&lt;!&ndash;<ion-item col-6 [ngStyle]="{'border-bottom': platform.is('ios') ? 'inherit' : 'none' }">&ndash;&gt;-->
-      <!--&lt;!&ndash;<ion-label showWhen="core">Last Name</ion-label>&ndash;&gt;-->
-      <!--&lt;!&ndash;<ion-input class="registration" placeholder="{{platform.is('core') ? '' : 'Last Name'}}"&ndash;&gt;-->
-      <!--&lt;!&ndash;[(ngModel)]="register.lastname" name="lastname"&ndash;&gt;-->
-      <!--&lt;!&ndash;(ionBlur)="validateField('lastname')"></ion-input>&ndash;&gt;-->
-      <!--&lt;!&ndash;</ion-item>&ndash;&gt;-->
-      <!--&lt;!&ndash;</ion-row>&ndash;&gt;-->
-
-      <!--&lt;!&ndash;<ion-row *ngIf="errorMsg.firstname || errorMsg.lastname">&ndash;&gt;-->
-      <!--&lt;!&ndash;<ion-col col-6 class="input-error">&ndash;&gt;-->
-      <!--&lt;!&ndash;<span>{{ errorMsg.firstname}}</span>&ndash;&gt;-->
-      <!--&lt;!&ndash;</ion-col>&ndash;&gt;-->
-      <!--&lt;!&ndash;<ion-col col-6 class="input-error">&ndash;&gt;-->
-      <!--&lt;!&ndash;<span style="padding-left:12px;">{{ errorMsg.lastname}}</span>&ndash;&gt;-->
-      <!--&lt;!&ndash;</ion-col>&ndash;&gt;-->
-      <!--&lt;!&ndash;</ion-row>&ndash;&gt;-->
-
-
-      <!--&lt;!&ndash;DATE OF BIRTH&ndash;&gt;-->
-      <!--<ion-item *ngIf="!platform.is('core')">-->
-        <!--<ion-label showWhen="core" style="max-width: 115px;">Date of Birth</ion-label>-->
-        <!--<ion-datetime showWhen="ios, android" placeholder="{{platform.is('core') ? '' : 'Date of Birth'}}"-->
-                      <!--[(ngModel)]="register.date_of_birth" name="date_of_birth"-->
-                      <!--(ionCancel)="validateField('date_of_birth')"-->
-                      <!--(ngModelChange)="validateField('date_of_birth')"></ion-datetime>-->
-
-        <!--<ion-icon md-name="date_range" item-start></ion-icon>-->
-      <!--</ion-item>-->
-
-      <!--<ion-item *ngIf="platform.is('core')" class="cws-input" (click)="focusInput('date_of_birth')">-->
-        <!--<ion-label showWhen="core" style="max-width: 115px;">Date of Birth</ion-label>-->
-        <!--<ion-input type="date" [(ngModel)]="register.date_of_birth" name="date_of_birth" (ionCancel)="validateField('date_of_birth')"-->
-                   <!--(ngModelChange)="validateField('date_of_birth')" max="today" min="1900-01-01" autocomplete="none"></ion-input>-->
-
-        <!--<ion-icon md-name="date_range" item-start></ion-icon>-->
-      <!--</ion-item>-->
-
-      <!--<ion-row *ngIf="errorMsg.date_of_birth">-->
-        <!--<ion-col class="input-error">-->
-          <!--<span>{{errorMsg.date_of_birth}}</span>-->
-        <!--</ion-col>-->
-      <!--</ion-row>-->
-
-      <!--&lt;!&ndash;EMAIL&ndash;&gt;-->
-      <!--<ion-item class="cws-input" (click)="focusInput('email')">-->
-        <!--<ion-label showWhen="core">Email</ion-label>-->
-        <!--<ion-input type="email" placeholder="{{platform.is('core') ? '' : 'Email'}}" [(ngModel)]="register.email"-->
-                   <!--name="email" (ionBlur)="validateField('email')" autocomplete="none"></ion-input>-->
-        <!--<ion-icon name="md-at" item-start></ion-icon>-->
-      <!--</ion-item>-->
-
-      <!--<ion-row *ngIf="errorMsg.email">-->
-        <!--<ion-col class="input-error">-->
-          <!--<span>{{errorMsg.email}}</span>-->
-        <!--</ion-col>-->
-      <!--</ion-row>-->
-
-      <!--&lt;!&ndash; ADDRESS &ndash;&gt;-->
-      <!--<ion-item class="cws-input" (click)="focusInput('address')">-->
-        <!--<ion-label showWhen="core">Complete Address</ion-label>-->
-        <!--<ion-input placeholder="{{platform.is('core') ? '' : 'Complete Address'}}" [(ngModel)]="register.address"-->
-                   <!--name="address" (keyup)="queryAddress()" (ionBlur)="validateAddress()" autocomplete="none"></ion-input>-->
-        <!--<ion-icon md-name="mail" item-start></ion-icon>-->
-        <!--<button ion-button item-end icon-only clear (click)="openAddressInfo($event)">-->
-          <!--<ion-icon md-name="info"></ion-icon>-->
-        <!--</button>-->
-      <!--</ion-item>-->
-
-      <!--<div class="custom-autocomplete">-->
-        <!--<button ion-item *ngFor="let address of addressAC" (click)="selectAddress(address)">-->
-          <!--{{ address }}-->
-        <!--</button>-->
-      <!--</div>-->
-
-      <!--<ion-row *ngIf="errorMsg.address">-->
-        <!--<ion-col class="input-error">-->
-          <!--<span>{{errorMsg.address}}</span>-->
-        <!--</ion-col>-->
-      <!--</ion-row>-->
-
-      <!--&lt;!&ndash;PHONE NUMBER&ndash;&gt;-->
-      <!--<ion-item class="cws-input" (click)="focusInput('telephone')">-->
-        <!--<ion-label showWhen="core">Phone Number</ion-label>-->
-        <!--<ion-input #telephone type="tel" maxlength="14" placeholder="{{platform.is('core') ? '' : 'Phone Number'}}"-->
-                   <!--[(ngModel)]="register.telephone" name="telephone"(keyup)="maskNumberAndroid('telephone');" (ngModelChange)="maskNumber('telephone');"-->
-                   <!--(ionBlur)="validateField('telephone')" autocomplete="none"></ion-input>-->
-        <!--<ion-icon md-name="phone" item-start></ion-icon>-->
-      <!--</ion-item>-->
-
-      <!--<ion-row *ngIf="errorMsg.telephone">-->
-        <!--<ion-col class="input-error">-->
-          <!--<span>{{errorMsg.telephone}}</span>-->
-        <!--</ion-col>-->
-      <!--</ion-row>-->
-
-      <!--&lt;!&ndash;SSN&ndash;&gt;-->
-      <!--<ion-item *ngIf="!minor" class="cws-input" (click)="focusInput('ssn')">-->
-        <!--<ion-label showWhen="core">Last four digits of SSN</ion-label>-->
-        <!--<ion-input type="password" maxlength="4" placeholder="{{platform.is('core') ? '' : 'Last four digits of SSN'}}"-->
-                   <!--[(ngModel)]="register.ssn" name="ssn" (ionBlur)="validateField('ssn')" autocomplete="none"></ion-input>-->
-        <!--<ion-icon item-start md-name="dialpad"></ion-icon>-->
-        <!--&lt;!&ndash;<button ion-button clear icon-only item-end (click)="otherPopover()">&ndash;&gt;-->
-        <!--&lt;!&ndash;<ion-icon md-name="attach_file" item-end></ion-icon>&ndash;&gt;-->
-        <!--&lt;!&ndash;</button>&ndash;&gt;-->
-      <!--</ion-item>-->
-
-      <!--<ion-row *ngIf="errorMsg.ssn">-->
-        <!--<ion-col class="input-error">-->
-          <!--<span>{{errorMsg.ssn}}</span>-->
-        <!--</ion-col>-->
-      <!--</ion-row>-->
-
-      <!--&lt;!&ndash;PASSWORD&ndash;&gt;-->
-      <!--<ion-item class="cws-input" (click)="focusInput('password')">-->
-        <!--<ion-label showWhen="core">Password</ion-label>-->
-        <!--<ion-input class="registration" type="{{passwordInput}}"-->
-                   <!--placeholder="{{platform.is('core') ? '' : 'Password'}}" [(ngModel)]="register.password"-->
-                   <!--name="password" (ionBlur)="validateField('password')" autocomplete="none"></ion-input>-->
-        <!--<ion-icon md-name="lock" item-start></ion-icon>-->
-        <!--<button ion-button clear icon-only item-end (click)="passwordRules($event)">-->
-          <!--<ion-icon md-name="info"></ion-icon>-->
-        <!--</button>-->
-      <!--</ion-item>-->
-
-      <!--<ion-row *ngIf="errorMsg.password">-->
-        <!--<ion-col class="input-error">-->
-          <!--<span>{{ errorMsg.password }}</span>-->
-        <!--</ion-col>-->
-      <!--</ion-row>-->
-
-      <!--&lt;!&ndash;CONFIRM PASSWORD&ndash;&gt;-->
-      <!--<ion-item class="cws-input" (click)="focusInput('confirmPassword')">-->
-        <!--<ion-label showWhen="core">Confirm Password</ion-label>-->
-        <!--<ion-input class="registration" type="{{passwordInput}}"-->
-                   <!--placeholder="{{platform.is('core') ? '' : 'Confirm Password'}}"-->
-                   <!--[(ngModel)]="register.confirmPassword" name="confirmPassword"-->
-                   <!--(ionBlur)="validateField('confirmPassword')" autocomplete="none"></ion-input>-->
-        <!--<button ion-button clear icon-only item-end (click)="togglePassword()">-->
-          <!--<ion-icon *ngIf="passwordInput == 'text'" name="md-eye-off"></ion-icon>-->
-          <!--<ion-icon *ngIf="passwordInput == 'password'" name="md-eye"></ion-icon>-->
-        <!--</button>-->
-        <!--<ion-icon item-start></ion-icon>-->
-      <!--</ion-item>-->
-
-
-      <!--<ion-row *ngIf="errorMsg.confirmPassword">-->
-        <!--<ion-col class="input-error">-->
-          <!--<span>{{ errorMsg.confirmPassword }}</span>-->
-        <!--</ion-col>-->
-      <!--</ion-row>-->
-
-      <!--&lt;!&ndash;TERMS AND CONDITIONS&ndash;&gt;-->
-      <!--<ion-item>-->
-        <!--<ion-checkbox (click)="openTerms()" [(ngModel)]="register.acceptTerms" name="acceptTerms"-->
-                      <!--(ngModelChange)="validateForm()"></ion-checkbox>-->
-        <!--<ion-label style="white-space:normal !important">Terms and Conditions with End User License Agreement</ion-label>-->
-      <!--</ion-item>-->
-
-      <!--&lt;!&ndash;Send Me Updates&ndash;&gt;-->
-      <!--<ion-item>-->
-        <!--<ion-label>Send Me Updates</ion-label>-->
-        <!--<ion-checkbox [(ngModel)]="register.feedback" name="feedback" (click)="contactMePush()"></ion-checkbox>-->
-      <!--</ion-item>-->
-    <!--</ion-list>-->
-
-    <!--&lt;!&ndash;GUARDIAN INFORMATION&ndash;&gt;-->
-    <!--<ion-list *ngIf="minor">-->
-      <!--<ion-list-header>-->
-        <!--<span item-start showWhen="ios, android">Guardian Information</span>-->
-        <!--<div item-start class="section-heading" showWhen="core">Guardian Information</div>-->
-      <!--</ion-list-header>-->
-
-      <!--&lt;!&ndash;GUARDIAN FIRST NAME&ndash;&gt;-->
-      <!--<ion-item class="cws-input" (click)="focusInput('guardFirstName')">-->
-        <!--<ion-label showWhen="core">First Name</ion-label>-->
-        <!--<ion-input placeholder="{{platform.is('core') ? '' : 'First Name'}}" [(ngModel)]="register.guardFirstName"-->
-                   <!--name="guardFirstName" (ionBlur)="validateField('guardFirstName')" autocomplete="none"></ion-input>-->
-        <!--<ion-icon md-name="person" item-start></ion-icon>-->
-      <!--</ion-item>-->
-
-      <!--<ion-row *ngIf="errorMsg.guardFirstName">-->
-        <!--<ion-col class="input-error">-->
-          <!--<span>{{ errorMsg.guardFirstName}}</span>-->
-        <!--</ion-col>-->
-      <!--</ion-row>-->
-
-      <!--&lt;!&ndash;GUARDIAN LAST NAME&ndash;&gt;-->
-      <!--<ion-item class="cws-input" (click)="focusInput('guardLastName')">-->
-        <!--<ion-label showWhen="core">Last Name</ion-label>-->
-        <!--<ion-input placeholder="{{platform.is('core') ? '' : 'Last Name'}}" [(ngModel)]="register.guardLastName"-->
-                   <!--name="guardLastName" (ionBlur)="validateField('guardLastName')" autocomplete="none"></ion-input>-->
-        <!--<ion-icon item-start></ion-icon>-->
-      <!--</ion-item>-->
-
-      <!--<ion-row *ngIf="errorMsg.guardLastName">-->
-
-        <!--<ion-col class="input-error">-->
-          <!--<span>{{ errorMsg.guardLastName}}</span>-->
-        <!--</ion-col>-->
-      <!--</ion-row>-->
-
-      <!--&lt;!&ndash;GUARDIAN EMAIL&ndash;&gt;-->
-      <!--<ion-item class="cws-input" (click)="focusInput('guardEmail')">-->
-        <!--<ion-label showWhen="core">Email</ion-label>-->
-        <!--<ion-input type="email" placeholder="{{platform.is('core') ? '' : 'Email'}}" [(ngModel)]="register.guardEmail"-->
-                   <!--name="guardEmail" (ionBlur)="validateField('guardEmail')" autocomplete="none"></ion-input>-->
-        <!--<ion-icon name="md-at" item-start></ion-icon>-->
-      <!--</ion-item>-->
-
-      <!--<ion-row *ngIf="errorMsg.guardEmail">-->
-        <!--<ion-col class="input-error">-->
-          <!--<span>{{ errorMsg.guardEmail}}</span>-->
-        <!--</ion-col>-->
-      <!--</ion-row>-->
-
-      <!--&lt;!&ndash;<ion-row>&ndash;&gt;-->
-      <!--&lt;!&ndash;SSN&ndash;&gt;-->
-      <!--<ion-item class="cws-input" (click)="focusInput('guardSSN')">-->
-        <!--<ion-label showWhen="core">Last Four SSN</ion-label>-->
-        <!--<ion-input class="registration" type="password" maxlength="4"-->
-                   <!--placeholder="{{platform.is('core') ? '' : 'Last 4 SSN'}}" [(ngModel)]="register.guardSSN"-->
-                   <!--name="guardSSN" (ionBlur)="validateField('guardSSN')" autocomplete="none"></ion-input>-->
-
-        <!--<ion-icon item-start md-name="dialpad"></ion-icon>-->
-        <!--&lt;!&ndash;<button ion-button clear icon-only item-end (click)="otherPopover()">&ndash;&gt;-->
-        <!--&lt;!&ndash;<ion-icon md-name="attach_file" item-end></ion-icon>&ndash;&gt;-->
-        <!--&lt;!&ndash;</button>&ndash;&gt;-->
-
-      <!--</ion-item>-->
-
-      <!--<ion-row *ngIf="errorMsg.guardSSN">-->
-        <!--<ion-col class="input-error">-->
-          <!--<span>{{ errorMsg.guardSSN}}</span>-->
-        <!--</ion-col>-->
-      <!--</ion-row>-->
-
-    <!--</ion-list>-->
-
-    <!--&lt;!&ndash; BUSINESS INFO &ndash;&gt;-->
-    <!--<ion-list>-->
-      <!--<ion-list-header>-->
-        <!--<span item-start showWhen="ios, android" style="margin-bottom:14px;">-->
-          <!--Hamilton CapTel for Business-->
-          <!--<br>-->
-          <!--<i style="font-size:12px;position:absolute">Cisco Business Phone Users</i>-->
-        <!--</span>-->
-        <!--<div item-start class="section-heading" showWhen="core" style="margin-bottom:14px;">-->
-          <!--Hamilton CapTel for Business-->
-          <!--<br>-->
-          <!--<i style="font-size:12px;position:absolute">For Cisco business phone users only</i>-->
-        <!--</div>-->
-        <!--<button ion-button clear icon-only item-end (click)="openFAQPage('biz')" style="margin-right:16px;">-->
-          <!--<ion-icon md-name="info"></ion-icon>-->
-        <!--</button>-->
-      <!--</ion-list-header>-->
-
-      <!--&lt;!&ndash;USER ID&ndash;&gt;-->
-      <!--<ion-item class="cws-input" (click)="focusInput('userid')">-->
-        <!--<ion-label showWhen="core">User ID Number</ion-label>-->
-        <!--<ion-input class="registration" placeholder="{{platform.is('core') ? '' : 'User ID Number'}}"-->
-                   <!--[(ngModel)]="register.userid" name="userid" (ionBlur)="validateField('userid')" maxlength="10" autocomplete="none"></ion-input>-->
-        <!--<ion-icon md-name="person" item-start></ion-icon>-->
-      <!--</ion-item>-->
-
-      <!--<ion-row *ngIf="errorMsg.userid">-->
-        <!--<ion-col class="input-error">-->
-          <!--<span>{{errorMsg.userid}}</span>-->
-        <!--</ion-col>-->
-      <!--</ion-row>-->
-
-      <!--&lt;!&ndash;PIN&ndash;&gt;-->
-      <!--<ion-item class="cws-input" (click)="focusInput('pin')">-->
-        <!--<ion-label showWhen="core">PIN</ion-label>-->
-        <!--<ion-input class="registration" placeholder="{{platform.is('core') ? '' : 'PIN'}}"-->
-                   <!--[(ngModel)]="register.pin" name="pin" (ionBlur)="validateField('pin')" maxlength="4" autocomplete="none"></ion-input>-->
-        <!--<ion-icon item-start md-name="dialpad"></ion-icon>-->
-      <!--</ion-item>-->
-      <!--<ion-row *ngIf="errorMsg.pin">-->
-        <!--<ion-col class="input-error">-->
-          <!--<span>{{ errorMsg.pin }}</span>-->
-        <!--</ion-col>-->
-      <!--</ion-row>-->
-
-      <!--&lt;!&ndash;CONFIRM PIN&ndash;&gt;-->
-      <!--<ion-item class="cws-input" (click)="focusInput('confirmPin')">-->
-        <!--<ion-label showWhen="core">Confirm PIN</ion-label>-->
-        <!--<ion-input placeholder="{{platform.is('core') ? '' : 'Confirm PIN'}}"-->
-                   <!--[(ngModel)]="register.confirmPin" name="confirmPin"-->
-                   <!--(ionBlur)="validateField('confirmPin')" maxlength="4" autocomplete="none"></ion-input>-->
-        <!--<ion-icon item-start=""></ion-icon>-->
-      <!--</ion-item>-->
-
-      <!--<ion-row *ngIf="errorMsg.confirmPin">-->
-        <!--<ion-col class="input-error">-->
-          <!--<span>{{ errorMsg.confirmPin }}</span>-->
-        <!--</ion-col>-->
-      <!--</ion-row>-->
-    <!--</ion-list>-->
-
-    <!--<ion-list>-->
-
-      <!--<ion-item *ngIf="imagePath">-->
-        <!--<p>{{imagePath}}</p>-->
-        <!--<img src="{{imagePath}}" *ngIf="imagePath" alt="Ionic File" width="300"/>-->
-      <!--</ion-item>-->
-
-      <!--<div style="text-align: center;" [hidden]="captchaPassed">-->
-        <!--<re-captcha style="display: inline-block;" (resolved)="captchaResolved($event)" siteKey="6Lcv2xcUAAAAAJJrmBryYc4uBO5b64OAEe26tAyn"></re-captcha>-->
-      <!--</div>-->
-
-      <!--<div style="text-align:center;">-->
-        <!--<button type="button" ion-button style="width:45%;" (click)="submit()" [disabled]="!captchaPassed || disableSubmit" >Submit</button>-->
-      <!--</div>-->
-
-    <!--</ion-list>-->
-  <!--</ion-grid>-->
-<!--</form>-->
-<!--</ion-content>-->
