@@ -133,6 +133,16 @@ export class EvalPage {
   // Block 40
   traitAverage: any;
 
+  // Block 41
+  firstRec: any;
+  secondRec: any;
+  
+  //Block 42
+  raterSignature: any;
+  raterDate: any;
+
+
+
 
 
 
