@@ -27,119 +27,121 @@ export class EvalPage {
     ssn: '',
     uic: '',
     station: '',
-    reportDate: new Date()
+    reportDate: new Date(),
+    // Block 5 - Enlistment Type
+    enlistType: {
+      active: false,
+      fts: false,
+      inActive: false,
+      atAdsw: false
+    },
+    // Block 8 - Promotion Status object to display choices to user
+    promotionStatus: {
+      regular: false,
+      frocked: false,
+      selected: false,
+      spot: false
+    },
+    // Block 10,11,12,13
+    reportOccassion: {
+      periodic: false,
+      detachment: false,
+      promotion: false,
+      special: false
+    },
+    // Block 14 & 15
+    reportPeriod: {
+      from: new Date(),
+      to: new Date()
+    },
+    // Block 16 - Used if it is a not observed report
+    notObserved: false,
+    // Block 17,18,19
+    reportType: {
+      regular: false,
+      concurrent: false
+    },
+    // Block 20
+    physical: {
+      p: false, // pass
+      f: false, // fail
+      m: false, // medical waiver from entire PFA
+      w: false, // medical waiver from one or more events
+      b: false // authorized non-participation
+    },
+    // Block 21 - Billet Subcategory
+    billetSub: {
+      na: false,
+      basic: false,
+      approved: false
+    },
+    // Block 22,23,24,25,26,27
+    reportingSenior: {
+      firstName: '',
+      lastName: '',
+      middleInitial: '',
+      grade: '',
+      desig: '',
+      title: '',
+      uic: '',
+      ssn: ''
+    },
+    // Block 28
+    commandAchievements: '',
+    // Block 29
+    primaryDuty: {
+      briefDuty: '',
+      mainDuty: ''
+    },
+    // Block 30
+    dateCounseled: new Date(),
+    // Block 31
+    counselor: {
+      firstname: null,
+      lastname: null,
+      midlleInitial: null
+    },
+    // Block 32
+    counselorSignature: '',
+    // Block 33-39
+    performanceScore: {
+      profKnowledge: null,
+      qualityWork: null,
+      commandEO: null,
+      militaryBearing: null,
+      personalInitiative: null,
+      teamwork: null,
+      leadership: null
+    },
+    // Block 40
+    traitAverage: '',
+    // Block 41
+    firstRec: '',
+    secondRec: '',
+    //Block 42
+    raterSignature: '',
+    raterDate: ''
   };
 
-  // Block 5 - Enlistment Type
-  enlistType: any = {
-    active: false,
-    fts: false,
-    inActive: false,
-    atAdsw: false
-  }
+ 
 
-  // Block 8 - Promotion Status object to display choices to user
-  promotionStatus: any = {
-    regular: false,
-    frocked: false,
-    selected: false,
-    spot: false
-  }
-
-  // Block 10,11,12,13
-  reportOccassion: any = {
-    periodic: false,
-    detachment: false,
-    promotion: false,
-    special: false
-  }
-
-  // Block 14 & 15
-  reportPeriod: any = {
-    from: new Date(),
-    to: new Date()
-  }
-
-  // Block 16 - Used if it is a not observed report
-  notObserved: any = false;
-
-  // Block 17,18,19
-  reportType: any = {
-    regular: false,
-    concurrent: false
-  }
-
-  // Block 20
-  physical: any = {
-    p: false, // pass
-    f: false, // fail
-    m: false, // medical waiver from entire PFA
-    w: false, // medical waiver from one or more events
-    b: false // authorized non-participation
-  }
-
-  // Block 21 - Billet Subcategory
-  billetSub: any = {
-    na: false,
-    basic: false,
-    approved: false
-  }
-
-  // Block 22,23,24,25,26,27
-  reportingSenior: any = {
-    firstName: '',
-    lastName: '',
-    middleInitial: '',
-    grade: '',
-    desig: '',
-    title: '',
-    uic: '',
-    ssn: ''
-  }
-
-  // Block 28
-  commandAchievements: any;
-
-  // Block 29
-  primaryDutie: any = {
-    briefDuty: '',
-    mainDuty: ''
-  }
-
-  // Block 30
-  dateCounseled = new Date();
-
-  // Block 31
-  counselor: any = {
-    firstname: null,
-    lastname: null,
-    midlleInitial: null
-  }
-
-  // Block 32
-  counselorSignature: any;
-
-  // Block 33-39
-  performanceScore: any = {
-    profKnowledge: null,
-    qualityWork: null,
-    commandEO: null,
-    militaryBearing: null,
-    personalInitiative: null,
-    teamwork: null,
-    leadership: null
-  }
-
-  // Block 40
-  traitAverage: any;
-
-  // Block 41
-  firstRec: any;
-  secondRec: any;
   
-  //Block 42
-  raterSignature: any;
-  raterDate: any;
+
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
 
 
