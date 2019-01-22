@@ -1,18 +1,21 @@
-<!--
-  Generated template for the AboutPage page.
+<div class="container">
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
+  <!-- Little trick to center the inputs to the viewer -->
+  <div class="form-container">
+    <form id="input-form" [formGroup]="myForm" novalidate>
 
-  <ion-navbar>
-    <ion-title>About</ion-title>
-  </ion-navbar>
+      <!-- Cycle through all the inputs -->
+      <div *ngFor="let input of inputList">
 
-</ion-header>
+        <!-- Insert an input accordingly and get the style/position from the component -->
+        <input type="text"
+               [name]="input.name"
+               [formControlName]="input.name"
+               [value]="input.value"
+               [ngStyle]="getInputPosition(input)">
 
-
-<ion-content padding>
-
-</ion-content>
+      </div>
+    </form>
+  </div>
+  <pdf-viewer id="viewer" [src]="pdfSrc" (after-load-complete)="loadComplete($event)"></pdf-viewer>
+</div>
