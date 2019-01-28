@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+
 // import { useAnimation } from '@angular/core/src/animation/dsl';
 
 /**
@@ -185,6 +186,10 @@ export class PersonnelPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PersonnelPage');
+  }
+
+  populateEval(user){
+   console.log(user);
   }
 
 }

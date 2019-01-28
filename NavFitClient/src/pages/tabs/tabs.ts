@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-import { AboutPage } from '../about/about';
+// import { AboutPage } from '../about/about';
 import { PersonnelPage } from '../personnel/personnel';
 import { EvalPage } from '../eval/eval';
-import { HomePage } from '../home/home';
-import { RegistrationPage } from '../registration/registration';
+// import { HomePage } from '../home/home';
+// import { RegistrationPage } from '../registration/registration';
 /**
  * Generated class for the TabsPage page.
  *
@@ -20,11 +20,11 @@ import { RegistrationPage } from '../registration/registration';
 })
 export class TabsPage {
 
-  tab1Root = HomePage;
-  tab2Root = PersonnelPage;
-  tab3Root = EvalPage;
-  tab4Root = AboutPage;
-  tab5Root = RegistrationPage;
+  // tab1Root = HomePage;
+  tab1Root = PersonnelPage;
+  tab2Root = EvalPage;
+  // tab4Root = AboutPage;
+  // tab5Root = RegistrationPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

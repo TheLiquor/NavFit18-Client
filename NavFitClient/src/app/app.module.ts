@@ -12,8 +12,6 @@ import { AboutPage } from '../pages/about/about';
 import { PersonnelPage } from '../pages/personnel/personnel';
 import { EvalPage } from '../pages/eval/eval';
 
-import { PdfViewerModule } from 'ng2-pdf-viewer';
-
 @NgModule({
   declarations: [
     MyApp,
@@ -26,8 +24,7 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
-    PdfViewerModule
+    IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [

@@ -20,14 +20,18 @@
         <ion-col>Rate</ion-col>
         <ion-col>Rank</ion-col>
         <ion-col>UIC</ion-col>
+        <ion-col>Create Eval</ion-col>
+        <ion-item-divider></ion-item-divider>
       </ion-row>
       <ion-row *ngFor="let personnel of userArr">
-        <ion-item-divider></ion-item-divider>
         <ion-col>{{personnel.firstName}}</ion-col>
         <ion-col>{{personnel.lastName}}</ion-col>
         <ion-col>{{personnel.rate}}</ion-col>
         <ion-col>{{personnel.rank}}</ion-col>
         <ion-col>{{personnel.uic}}</ion-col>
+        <ion-col>
+          <ion-icon style="cursor: pointer" name="add-circle" (click)="populateEval(personnel)"></ion-icon>
+        </ion-col>
       </ion-row>
     </ion-list>
 
