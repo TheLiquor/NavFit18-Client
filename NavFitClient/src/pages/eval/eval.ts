@@ -1,6 +1,7 @@
 // https://medium.com/factory-mind/angular-pdf-forms-fa72b15c3fbd
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import * as _ from 'lodash';
 
 /**
  * Generated class for the EvalPage page.
@@ -50,10 +51,8 @@ export class EvalPage {
       special: false
     },
     // Block 14 & 15
-    reportPeriod: {
-      from: new Date(),
-      to: new Date()
-    },
+    reportPeriodFrom: new Date(),
+    reportPeriodTo: new Date(),
     // Block 16 - Used if it is a not observed report
     notObserved: false,
     // Block 17,18,19
@@ -123,36 +122,11 @@ export class EvalPage {
     raterDate: ''
   };
 
- 
-
-  
-
-  
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-
-
-
-
-
-
-
-
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    let value = navParams.get('user');
+    _.extend(this.userObj, value);
+    console.log(this.userObj);
+
   }
 
   ionViewDidLoad() {

@@ -11,62 +11,62 @@
   <ion-grid col-lg-6 offset-lg-3 style="padding: 0px;">
     <ion-item>
       <ion-label>First Name</ion-label>
-      <ion-input></ion-input>
+      <ion-input [(ngModel)]="userObj.firstName"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>Last Name</ion-label>
-      <ion-input></ion-input>
+      <ion-input [(ngModel)]="userObj.lastName"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>Middle Initial</ion-label>
-      <ion-input></ion-input>
+      <ion-input [(ngModel)]="userObj.middleInitial"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>Suffix</ion-label>
-      <ion-input></ion-input>
+      <ion-input [(ngModel)]="userObj.suffix"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>Rate</ion-label>
-      <ion-input></ion-input>
+      <ion-input [(ngModel)]="userObj.rate"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>Designator</ion-label>
-      <ion-input></ion-input>
+      <ion-input [(ngModel)]="userObj.desig"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>SSN</ion-label>
-      <ion-input></ion-input>
+      <ion-input [(ngModel)]="userObj.ssn"></ion-input>
     </ion-item>
-    <ion-list radio-group>
+    <ion-list radio-group  [(ngModel)]="userObj.enlistType">
       <ion-list-header>
         Enlistment Type
       </ion-list-header>
       <ion-item>
         <ion-label>ACT</ion-label>
-        <ion-radio value="act"></ion-radio>
+        <ion-radio value="active"></ion-radio>
       </ion-item>
       <ion-item>
         <ion-label>FTS</ion-label>
-        <ion-radio value="fts"></ion-radio>
+        <ion-radio value="fts" ></ion-radio>
       </ion-item>
       <ion-item>
-        <ion-label>INACT</ion-label>
-        <ion-radio value="inact"></ion-radio>
+        <ion-label>INACTIVE</ion-label>
+        <ion-radio value="inActive" ></ion-radio>
       </ion-item>
       <ion-item>
         <ion-label>AT/ADSW/265</ion-label>
-        <ion-radio value="at"></ion-radio>
+        <ion-radio value="atAdsw"></ion-radio>
       </ion-item>
     </ion-list>
     <ion-item>
       <ion-label>UIC</ion-label>
-      <ion-input></ion-input>
+      <ion-input [(ngModel)]="userObj.uic"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>Ship/Station</ion-label>
-      <ion-input></ion-input>
+      <ion-input [(ngModel)]="userObj.station"></ion-input>
     </ion-item>
-    <ion-list radio-group>
+    <ion-list radio-group [(ngModel)]="userObj.promotionStatus">
       <ion-list-header>
         Promotion Status
       </ion-list-header>
@@ -89,9 +89,9 @@
     </ion-list>
     <ion-item>
       <ion-label>Date Reported</ion-label>
-      <ion-input type="date"></ion-input>
+      <ion-input type="date" [(ngModel)]="userObj.reportDate"></ion-input>
     </ion-item>
-    <ion-list radio-group>
+    <ion-list radio-group [(ngModel)]="userObj.reportOccasion">
       <ion-list-header>
         Occasion for Report
       </ion-list-header>
@@ -114,11 +114,11 @@
     </ion-list>
     <ion-item>
       <ion-label>Period of Report - From: </ion-label>
-      <ion-input type="date"></ion-input>
+      <ion-input type="date" [(ngModel)]="userObj.reportPeriodFrom"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>Period of Report - To:</ion-label>
-      <ion-input type="date"></ion-input>
+      <ion-input type="date" [(ngModel)]="userObj.reportPeriodTo"></ion-input>
     </ion-item>
     <ion-list radio-group>
       <ion-list-header>

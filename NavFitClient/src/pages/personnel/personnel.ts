@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { EvalPage } from '../eval/eval';
 
 // import { useAnimation } from '@angular/core/src/animation/dsl';
 
@@ -181,7 +182,6 @@ export class PersonnelPage {
         b: false // authorized non-participation
       },
     }
-    console.log(this.userArr);
   }
 
   ionViewDidLoad() {
@@ -189,7 +189,7 @@ export class PersonnelPage {
   }
 
   populateEval(user){
-   console.log(user);
+   this.navCtrl.push(EvalPage, {user: user});
   }
 
 }
