@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import * as _ from 'lodash';
 
+
 /**
  * Generated class for the EvalPage page.
  *
@@ -30,50 +31,22 @@ export class EvalPage {
     station: '',
     reportDate: new Date(),
     // Block 5 - Enlistment Type
-    enlistType: {
-      active: false,
-      fts: false,
-      inActive: false,
-      atAdsw: false
-    },
+    enlistType: '',
     // Block 8 - Promotion Status object to display choices to user
-    promotionStatus: {
-      regular: false,
-      frocked: false,
-      selected: false,
-      spot: false
-    },
+    promotionStatus: '',
     // Block 10,11,12,13
-    reportOccassion: {
-      periodic: false,
-      detachment: false,
-      promotion: false,
-      special: false
-    },
+    reportOccassion: '',
     // Block 14 & 15
     reportPeriodFrom: new Date(),
     reportPeriodTo: new Date(),
     // Block 16 - Used if it is a not observed report
-    notObserved: false,
+    notObserved: '',
     // Block 17,18,19
-    reportType: {
-      regular: false,
-      concurrent: false
-    },
+    reportType: '',
     // Block 20
-    physical: {
-      p: false, // pass
-      f: false, // fail
-      m: false, // medical waiver from entire PFA
-      w: false, // medical waiver from one or more events
-      b: false // authorized non-participation
-    },
+    physical: '',
     // Block 21 - Billet Subcategory
-    billetSub: {
-      na: false,
-      basic: false,
-      approved: false
-    },
+    billetSub: '',
     // Block 22,23,24,25,26,27
     reportingSenior: {
       firstName: '',
@@ -88,10 +61,8 @@ export class EvalPage {
     // Block 28
     commandAchievements: '',
     // Block 29
-    primaryDuty: {
-      briefDuty: '',
-      mainDuty: ''
-    },
+    primaryDutyBrief: '',
+    primaryDutyMain: '',
     // Block 30
     dateCounseled: new Date(),
     // Block 31
@@ -119,7 +90,9 @@ export class EvalPage {
     secondRec: '',
     //Block 42
     raterSignature: '',
-    raterDate: ''
+    raterDate: '',
+    //Block 43
+    performanceComments: ''
   };
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
@@ -132,5 +105,6 @@ export class EvalPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad EvalPage');
   }
+
 
 }

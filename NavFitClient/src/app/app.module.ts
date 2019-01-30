@@ -12,6 +12,8 @@ import { AboutPage } from '../pages/about/about';
 import { PersonnelPage } from '../pages/personnel/personnel';
 import { EvalPage } from '../pages/eval/eval';
 
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -39,7 +41,7 @@ import { EvalPage } from '../pages/eval/eval';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
   ]
 })
 export class AppModule {}

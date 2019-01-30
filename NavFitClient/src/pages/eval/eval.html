@@ -120,7 +120,7 @@
       <ion-label>Period of Report - To:</ion-label>
       <ion-input type="date" [(ngModel)]="userObj.reportPeriodTo"></ion-input>
     </ion-item>
-    <ion-list radio-group>
+    <ion-list radio-group [(ngModel)]="userObj.notObserved">
       <ion-list-header>
         Is this report Observed?
       </ion-list-header>
@@ -133,7 +133,7 @@
         <ion-radio value="false"></ion-radio>
       </ion-item>
     </ion-list>
-    <ion-list radio-group>
+    <ion-list radio-group [(ngModel)]="userObj.reportType">
       <ion-list-header>
         Report Type
       </ion-list-header>
@@ -146,7 +146,73 @@
         <ion-radio value="concurrent"></ion-radio>
       </ion-item>
     </ion-list>
+    <ion-list radio-group [(ngModel)]="userObj.phsycal">
+      <ion-list-header>
+        Physical Readiness
+      </ion-list-header>
+      <ion-item>
+        <ion-label>Pass</ion-label>
+        <ion-radio value="pass"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Fail</ion-label>
+        <ion-radio value="fail"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Medical Waiver (Entire PFA)</ion-label>
+        <ion-radio value="medEntire"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Medical Waiver (Some PFA)</ion-label>
+        <ion-radio value="medSome"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Authorized Non-Participation</ion-label>
+        <ion-radio value="authNon"></ion-radio>
+      </ion-item>
+    </ion-list>
+    <ion-list radio-group [(ngModel)]="userObj.billetSub">
+      <ion-list-header>
+        Billet Subcategory (If Any)
+      </ion-list-header>
+      <ion-item>
+        <ion-label>N/A</ion-label>
+        <ion-radio value="na"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Basic</ion-label>
+        <ion-radio value="basic"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Approved</ion-label>
+        <ion-radio value="approved"></ion-radio>
+      </ion-item>
+    </ion-list>
+    <ion-item>
+      <ion-label text-wrap>Command Employment and Command Achievements</ion-label>
+      <ion-textarea [(ngModel)]="userObj.commandAchievements"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label text-wrap>Primary Duty Abbreviation</ion-label>
+      <ion-textarea [(ngModel)]="userObj.primaryDutyBrief"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label text-wrap>Primary/Collateral/Watchstanding duties</ion-label>
+      <ion-textarea [(ngModel)]="userObj.primaryDutyMain"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label text-wrap>Comments on Performance</ion-label>
+      <ion-textarea [(ngModel)]="userObj.performanceComments"></ion-textarea>
+    </ion-item>
+    <div style="text-align:center">
+      <!--<a href="C:\Users\joseph.fowler\Desktop\School\NavFitClient\NavFit18-Client\NavFitClient\NAVPERS_1616-26_Rev11-11.pdf" download>-->
+      <a href="../assets/imgs/navy_joe.pdf" download>
+        <button ion-button  expand="block">Save</button>
+      </a>
+    </div>
+
   </ion-grid>
+
 
 
 </ion-content>
