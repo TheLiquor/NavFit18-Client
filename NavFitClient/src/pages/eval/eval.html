@@ -204,12 +204,7 @@
       <ion-label text-wrap>Comments on Performance</ion-label>
       <ion-textarea [(ngModel)]="userObj.performanceComments"></ion-textarea>
     </ion-item>
-    <div style="text-align:center">
-      <!--<a href="C:\Users\joseph.fowler\Desktop\School\NavFitClient\NavFit18-Client\NavFitClient\NAVPERS_1616-26_Rev11-11.pdf" download>-->
-      <a href="../assets/imgs/navy_joe.pdf" download>
-        <button ion-button  expand="block">Save</button>
-      </a>
-    </div>
+    <button ion-button (click)="sendEval(userObj)">Save</button>
 
   </ion-grid>
 

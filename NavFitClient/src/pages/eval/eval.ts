@@ -106,5 +106,8 @@ export class EvalPage {
     console.log('ionViewDidLoad EvalPage');
   }
 
+  sendEval(obj) {
+    this.io.socket.post('/')
+  }
 
 }
